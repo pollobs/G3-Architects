@@ -35,9 +35,18 @@
 
 /* Font Sizes */
 
-h1{
+.h1{
     font-size: 4rem;
     font-weight: 700;
+}
+
+.h2{
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+.medium{
+    font-weight: 500;
 }
 
 .body-16-px{
@@ -75,6 +84,10 @@ h1{
     font-weight: 600;
     border-radius: 8px;
     cursor: pointer;
+}
+
+main section{
+    margin-top: 130px;
 }
 
 /* Navbar */
@@ -132,11 +145,38 @@ h1{
     border-radius: 8px;
 }
 
+/* Team Section */
+
+.team-content-wrapper{
+    align-items: center;
+    justify-content: center;
+    gap: 75px;
+}
+
+.team-image-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.team-image-container img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.team-content{
+    max-width: 540px;
+}
+
 /* Media Queries */
 
 
 @media screen and (max-width: 576px) {
 
+    main section{
+        margin-top: 60px;
+    }
 
     .container{
         padding: 0 16px;
@@ -154,7 +194,27 @@ h1{
     }
 
     .hero{
-    padding: 60px 0 45px 0;
+    padding: 60px 0 40px 0;
+    }
+
+    .team-content-wrapper{
+        flex-direction: column-reverse;
+    gap: 40px;
+    
 }
+
+.team-image-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+}
+
+.team-image-container img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
 
  }
